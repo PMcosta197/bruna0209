@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>confie em mim</title>
+  <style>
+    :root { color-scheme: dark; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #000;
+      color: #eaeaea;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    }
+    .center {
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+    }
+    button {
+      font: inherit;
+      padding: 0.9rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid #444;
+      background: #111;
+      color: #eaeaea;
+      cursor: pointer;
+      transition: transform .06s ease, border-color .2s ease;
+    }
+    button:hover { border-color: #888; }
+    button:active { transform: scale(.98); }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <button id="go">confie em mim</button>
+  </div>
+
+  <script>
+    document.getElementById('go').addEventListener('click', () => {
+      // guarda intenção de tocar música
+      sessionStorage.setItem('playAudio', '1');
+      // vai para o poema
+      location.href = 'poema.html';
+    });
+  </script>
+</body>
+</html>

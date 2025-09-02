@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>poema</title>
+  <style>
+    :root { color-scheme: dark; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #000;
+      color: #eaeaea;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      line-height: 1.5;
+    }
+    .wrap {
+      min-height: 100%;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      padding: 3rem 1rem;
+      box-sizing: border-box;
+    }
+    pre {
+      margin: 0;
+      white-space: pre-wrap;
+      text-align: center;
+    }
+    button {
+      margin-bottom: 2rem;
+      font: inherit;
+      padding: 0.7rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid #444;
+      background: #111;
+      color: #eaeaea;
+      cursor: pointer;
+      transition: transform .06s ease, border-color .2s ease;
+    }
+    button:hover { border-color: #888; }
+    button:active { transform: scale(.97); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- Botão acima do poema -->
+    <button id="playBtn">▶ Tocar música</button>
+
+    <pre>
+Queria desejar feliz aniversario
+isso foi feito de ultima hora
+então se possivel
+releva, eu não tive tanto tempo pra pensar.
+Enfim, eu queria desejar feliz aniversario
+tu é uma das amizades mais antigas que tenho
+
+
+                            e querendo ou não
+                            eu não queria deixar
+                            passar esse dia em branco
+                            talvez essa seja uma das únicas vezes
+                            que vai me ver sendo gentil com alguém
+                            então se alguém perguntar, eu nunca estive aqui
+
+Segue aqui poema q deu vontade
+Se tiver algo errado releva, são 2 da manhã
+
+Se houvesse um eco capaz de me alcançar,
+contaria segredos guardados no peito:
+que ainda procuro razões para sonhar,
+e desenho no céu um azul
+que só o coração enxerga.
+
+Quando a vejo,
+o chão que me sustenta desaparece.
+Minhas certezas partem em silêncio,
+como aves cansadas
+que não sabem regressar.
+
+Imenso é o mundo
+mas menor que o abismo
+que o amor abre em mim.
+Há universos cabendo no gesto
+de quem amo.
+
+Deixa-me seguir teu rastro,
+mesmo que lento,
+mesmo que breve,
+até que o tempo acabe
+e nem a morte se atreva
+a me separar de ti.
+    </pre>
+  </div>
+
+  <!-- Áudio em loop -->
+  <audio id="bgm" src="audio.mp3" loop></audio>
+
+  <script>
+    const audio = document.getElementById('bgm');
+    const playBtn = document.getElementById('playBtn');
+
+    playBtn.addEventListener('click', () => {
+      audio.play();
+      playBtn.style.display = 'none'; // esconde o botão depois do clique
+    });
+  </script>
+</body>
+</html>
